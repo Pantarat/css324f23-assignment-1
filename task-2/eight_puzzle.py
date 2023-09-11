@@ -55,9 +55,9 @@ def h3(s):
     col_diff = 0
     row_diff = 0
     for idx in range(0, 9):
-        if board[idx]%3 != (idx+1)%3:
+        if (board[idx]-1)%3 != idx%3:
             col_diff += 1
-        if board[idx]/3 != (idx+1)/3:
+        if (board[idx]-1)//3 != idx//3:
             row_diff += 1
     
     return col_diff + row_diff
